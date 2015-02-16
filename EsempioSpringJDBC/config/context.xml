@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	 
+	<!-- Beans per collegarsi e usare MySQL -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost/appunti"/>
+		<property name="username" value="root"/>
+		<property name="password" value=""/>
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<!-- Bean Service -->
+	<bean id="beanService" class="net.appuntivari.spring.jdbc.service.Service">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+		<!-- Beans inizializza autore -  nome=Guest, cognome=Guest -->
+		<bean id="beanAutoreGuest" class="net.appuntivari.spring.jdbc.dto.Autori">
+			<property name="nome" value="Guest" />
+			<property name="cognome" value="Guest" />
+		</bean>
+		
+		<!-- Beans inizializza nota -->
+		<bean id="beanNuovaNota" class="net.appuntivari.spring.jdbc.dto.Notes">
+			<property name="note" value="nota creata con Spring" />
+			<property name="id_autore" value="1" />
+		</bean>
+		
+		<!-- Beans inizializza autore  -->
+		<bean id="beanNuovoAutore" class="net.appuntivari.spring.jdbc.dto.Autori">
+			<property name="nome" value="FraBean" />
+			<property name="cognome" value="PastuBean" />
+			<property name="id_sito" value="1" />
+		</bean>
+	
+		 
+</beans>

@@ -1,0 +1,43 @@
+package test.model;
+
+public class Scatola {
+
+	private int altezza;
+	private int larghezza;
+	private int profondita;
+
+	public Scatola(int altezza, int larghezza, int profondita) {
+		super();
+		this.altezza = altezza;
+		this.larghezza = larghezza;
+		this.profondita = profondita;
+	}
+
+	public Scatola() {
+		super();
+	}
+
+	public int calcolaVolume(){
+		return altezza*larghezza*profondita;
+	}
+	
+	public int getAltezza() {
+		return altezza;
+	}
+	public void setAltezza(int altezza) {
+		this.altezza = altezza;
+	}
+	public int getLarghezza() {
+		return larghezza;
+	}
+	public void setLarghezza(int larghezza) {
+		this.larghezza = larghezza;
+	}
+	public int getProfondita() {
+		return profondita;
+	}
+	public void setProfondita(int profondita) {
+		this.profondita = profondita;
+	}	
+	
+}

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/repo/!svn/ver/5890/testSpring
+END
+context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/repo/!svn/ver/3409/testSpring/context.xml
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/repo/!svn/ver/3409/testSpring/.project
+END
+context2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/repo/!svn/ver/3409/testSpring/context2.xml
+END
+context3.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/repo/!svn/ver/3409/testSpring/context3.xml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/repo/!svn/ver/5888/testSpring/.classpath
+END
+context-blank.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/repo/!svn/ver/5890/testSpring/context-blank.xml
+END

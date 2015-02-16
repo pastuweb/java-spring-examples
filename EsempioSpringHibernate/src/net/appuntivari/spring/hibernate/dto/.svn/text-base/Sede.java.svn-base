@@ -1,0 +1,56 @@
+package it.tcweb.model.dto;
+
+import java.util.List;
+
+import it.tcweb.base.model.dto.BaseObject;
+
+public class Sede extends BaseObject{
+
+	private String descrizione;
+	private String indirizzo;
+	private List<EdizioneCorsuale> edizioniCorsuali;
+	
+	public Sede() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+
+	public Sede(String descrizione, String indirizzo,
+			List<EdizioneCorsuale> edizioniCorsuali) {
+		super();
+		this.descrizione = descrizione;
+		this.indirizzo = indirizzo;
+		this.edizioniCorsuali = edizioniCorsuali;
+	}
+
+
+
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public String getIndirizzo() {
+		return indirizzo;
+	}
+
+	public void setIndirizzo(String indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+
+	public List<EdizioneCorsuale> getEdizioniCorsuali() {
+		return edizioniCorsuali;
+	}
+
+	public void setEdizioniCorsuali(List<EdizioneCorsuale> edizioniCorsuali) {
+		this.edizioniCorsuali = edizioniCorsuali;
+	}
+	
+	
+}

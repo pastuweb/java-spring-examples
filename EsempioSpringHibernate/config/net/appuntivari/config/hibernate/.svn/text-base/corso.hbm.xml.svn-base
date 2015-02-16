@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="it.tcweb.model.dto.Corso" table="corso" catalog="db_gestione_corsi">		
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>				
+		<property name="titolo" type="string">
+			<column name="TITOLO" length="40" not-null="true"/>
+		</property>
+		<property name="descrizione" type="string">
+			<column name="DESCRIZIONE" length="256" not-null="true"/>
+		</property>
+		<property name="area" type="string">
+			<column name="AREA" length="30" not-null="true"/>
+		</property>
+		<bag name="edizioniCorsuali" table="edizione_corsuale" inverse="true" cascade="save-update,delete,delete-orphan">      	
+            <key column="CORSO" not-null="true" />                             
+      		<one-to-many class="it.tcweb.model.dto.EdizioneCorsuale" />
+	  	</bag>	  	
+	</class>
+	<!-- INVERSE KEYWORD
+		 The "inverse" keyword is always declared in one-to-many and many-to-many 
+		 relationship (many-to-one doesn’t has inverse keyword), it means which 
+		 side is responsible to take care of the relationship.
+		 Es: in questo caso ogni EdizioneCorsuale contenuta nella lista di 
+		 edizioni corsuali di un corso deve esplicitamente puntare al Corso
+		 i.e. aver effettuato un setCorso(corso) in modo da permettere ad 
+		 Hibernate di inserire correttamente nella tabella di relazione 
+		 (ciò perchè inverse="true")		 
+	-->
+</hibernate-mapping>
+

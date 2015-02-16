@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="it.tcweb.model.dto.EdizioneCorsuale" table="edizione_corsuale" catalog="db_gestione_corsi">		
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>				
+		<property name="numeroMassimoAllievi" type="java.lang.Integer">
+			<column name="NUMERO_MASSIMO_ALLIEVI" length="20" not-null="true" unique="false" />
+		</property>		
+		<many-to-one name="sede" class="it.tcweb.model.dto.Sede" cascade="save-update">
+            <column name="SEDE" not-null="true" />
+        </many-to-one>		
+		<many-to-one name="corso" class="it.tcweb.model.dto.Corso" cascade="save-update">
+            <column name="CORSO" not-null="true" />
+        </many-to-one>				
+	</class>
+</hibernate-mapping>
+

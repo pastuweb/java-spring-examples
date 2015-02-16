@@ -1,0 +1,30 @@
+package test;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import test.model.Magazzino;
+
+public class TestMagazzinoSpring {
+
+	public static Log log = LogFactory.getLog(TestMagazzinoSpring.class);
+	
+	public static void main(String[] args) {
+		
+		AbstractApplicationContext contesto =
+			new FileSystemXmlApplicationContext(
+					"c:/tcweb/testSpring/context.xml"
+					);
+		
+		Magazzino magazzino = 
+			(Magazzino)contesto.getBean("magazzino");
+
+		log.debug("il magazzino contiene "
+				+magazzino.getScatole().size()+
+				" scatole");
+		
+	}
+	
+}

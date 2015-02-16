@@ -1,0 +1,72 @@
+package it.formaweb.model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="animali")
+public class Animale {
+
+	@Id
+	@GeneratedValue
+	@Column(name="id")
+	private Long id;
+	
+	@Column(name="nome_scientifico")
+	private String nomeScientifico;
+	
+	@Column(name="nome_comune")
+	private String nomeComune;
+	
+	@Column(name="tasso_riproduzione")
+	private Double tassoRiproduzione;
+	
+	public Animale() {
+		super();
+	}
+
+	public Animale(
+			String nomeScientifico,
+			String nomeComune,
+			Double tassoRiproduzione) {
+		super();
+		this.nomeScientifico = nomeScientifico;
+		this.nomeComune = nomeComune;
+		this.tassoRiproduzione = tassoRiproduzione;
+	}
+
+	@Override
+	public String toString() {
+		return "Nome Scientifico: "+nomeScientifico
+		+"\n"+"Nome Comune: "+nomeComune
+		+"\n"+"Tasso di Riproduzione: "+tassoRiproduzione;
+	}
+	
+	public String getNomeScientifico() {
+		return nomeScientifico;
+	}
+	public void setNomeScientifico(String nomeScientifico) {
+		this.nomeScientifico = nomeScientifico;
+	}
+	public String getNomeComune() {
+		return nomeComune;
+	}
+	public void setNomeComune(String nomeComune) {
+		this.nomeComune = nomeComune;
+	}
+	public Double getTassoRiproduzione() {
+		return tassoRiproduzione;
+	}
+	public void setTassoRiproduzione(Double tassoRiproduzione) {
+		this.tassoRiproduzione = tassoRiproduzione;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
+}

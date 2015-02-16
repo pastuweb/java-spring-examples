@@ -1,0 +1,37 @@
+package test;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
+import test.model.Impiegato;
+
+public class ServizioImpiegatiSpringImpl
+	implements ServizioImpiegati {
+
+	private JdbcTemplate jdbcTemplate;
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Impiegato> getImpiegati() {
+		return 
+		jdbcTemplate.query(
+				"SELECT * FROM impiegati", 
+				new RowMapper(){
+					public Object mapRow(ResultSet rs, int arg1) 
+							throws SQLException {
+						Impiegato imp = new Impiegato();
+						imp.setId(rs.getInt("id"));
+						imp.setNome(rs.getString("nome"));
+						imp.setCognome(rs.getString("cognome"));
+						return imp;
+					}
+				});
+	}
+}

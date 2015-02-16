@@ -1,0 +1,29 @@
+package test.model;
+
+import java.util.List;
+
+public class Magazzino {
+
+	private String nome;
+	
+	private List<Scatola> scatole;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<Scatola> getScatole() {
+		return scatole;
+	}
+
+	public void setScatole(List<Scatola> scatole) {
+		this.scatole = scatole;
+	}
+	
+	
+	
+}

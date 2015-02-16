@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/repo/!svn/ver/5885/testSpring/lez1/test
+END
+TestScatola.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/repo/!svn/ver/5885/testSpring/lez1/test/TestScatola.java
+END
+TestScatolaSpring.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/repo/!svn/ver/5885/testSpring/lez1/test/TestScatolaSpring.java
+END
+TestMagazzino.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/repo/!svn/ver/5885/testSpring/lez1/test/TestMagazzino.java
+END
+ServizioImpiegati.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/repo/!svn/ver/3409/testSpring/lez1/test/ServizioImpiegati.java
+END
+TestUguale.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/repo/!svn/ver/5885/testSpring/lez1/test/TestUguale.java
+END
+TestServizioImpiegati.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/repo/!svn/ver/3409/testSpring/lez1/test/TestServizioImpiegati.java
+END
+TestMagazzinoSpring.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/repo/!svn/ver/3409/testSpring/lez1/test/TestMagazzinoSpring.java
+END
+ServizioImpiegatiSpringImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/repo/!svn/ver/3409/testSpring/lez1/test/ServizioImpiegatiSpringImpl.java
+END
+ServizioImpiegatiJdbcImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/repo/!svn/ver/3409/testSpring/lez1/test/ServizioImpiegatiJdbcImpl.java
+END

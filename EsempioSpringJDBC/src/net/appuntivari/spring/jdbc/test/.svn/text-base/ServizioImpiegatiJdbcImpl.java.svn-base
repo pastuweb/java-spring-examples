@@ -1,0 +1,59 @@
+package test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import test.model.Impiegato;
+
+public class ServizioImpiegatiJdbcImpl 
+	implements ServizioImpiegati {
+
+	public List<Impiegato> getImpiegati() {
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(
+					"jdbc:mysql://localhost/impiegati",
+					"root",
+					"root");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			ResultSet rs = conn
+			.createStatement()
+			.executeQuery(
+					"SELECT * FROM impiegati"
+					);
+			List<Impiegato> ret = 
+				new ArrayList<Impiegato>();
+			while(rs.next()){
+				//...leggo i dati
+				Impiegato imp = new Impiegato();
+				imp.setId(rs.getInt("id"));
+				imp.setNome(rs.getString("nome"));
+				imp.setCognome(rs.getString("cognome"));
+				ret.add(imp);
+			}
+			return ret;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+}

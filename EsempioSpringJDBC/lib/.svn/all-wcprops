@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/repo/!svn/ver/5888/testSpring/lib
+END
+spring-modules-jcr.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/repo/!svn/ver/5888/testSpring/lib/spring-modules-jcr.jar
+END
+commons-logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/repo/!svn/ver/3409/testSpring/lib/commons-logging-1.1.1.jar
+END
+spring-context-support-2.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/repo/!svn/ver/5888/testSpring/lib/spring-context-support-2.5.5.jar
+END
+spring-beans-2.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/repo/!svn/ver/5888/testSpring/lib/spring-beans-2.5.5.jar
+END
+spring-web-2.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/repo/!svn/ver/5888/testSpring/lib/spring-web-2.5.5.jar
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/repo/!svn/ver/5888/testSpring/lib/commons-collections-3.1.jar
+END
+spring-webmvc-2.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/repo/!svn/ver/5888/testSpring/lib/spring-webmvc-2.5.5.jar
+END
+commons-pool-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/repo/!svn/ver/5888/testSpring/lib/commons-pool-1.2.jar
+END
+commons-dbcp-1.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/repo/!svn/ver/5888/testSpring/lib/commons-dbcp-1.2.1.jar
+END
+spring-2.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/repo/!svn/ver/3409/testSpring/lib/spring-2.5.5.jar
+END
+log4j-1.2.15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/repo/!svn/ver/3409/testSpring/lib/log4j-1.2.15.jar
+END
+mysql-connector-java-5.1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/repo/!svn/ver/3409/testSpring/lib/mysql-connector-java-5.1.6.jar
+END
+spring-context-2.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/repo/!svn/ver/5888/testSpring/lib/spring-context-2.5.5.jar
+END
+spring-core-2.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/repo/!svn/ver/5888/testSpring/lib/spring-core-2.5.5.jar
+END

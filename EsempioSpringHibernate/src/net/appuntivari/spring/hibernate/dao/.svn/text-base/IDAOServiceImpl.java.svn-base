@@ -1,0 +1,50 @@
+package it.tcweb.model.dao;
+
+import org.springframework.orm.hibernate3.HibernateOperations;
+
+import it.tcweb.model.dto.Corso;
+import it.tcweb.model.dto.EdizioneCorsuale;
+import it.tcweb.model.dto.Sede;
+
+public class IDAOServiceImpl implements IDAOService{
+
+	protected HibernateOperations hibernateTemplate;
+
+	
+	public HibernateOperations getHibernateTemplate() {
+		return hibernateTemplate;
+	}
+
+	public void setHibernateTemplate(HibernateOperations hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+	
+	@Override
+	public void createCorso(Corso corso) {
+						
+		hibernateTemplate.save(corso);		
+		
+	}
+
+	@Override
+	public void createSede(Sede sede) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void createEdizioneCorsuale(EdizioneCorsuale edizioneCorsuale) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void createSedeCorso(
+			EdizioneCorsuale edizioneCorsuale) {
+		
+		hibernateTemplate.save(edizioneCorsuale.getCorso());		
+		hibernateTemplate.save(edizioneCorsuale.getSede());		
+		
+	}
+
+}

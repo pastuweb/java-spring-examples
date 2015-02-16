@@ -1,0 +1,23 @@
+package test;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import test.model.Scatola;
+
+public class TestScatola {
+
+	public static Log log = LogFactory.getLog(TestScatola.class);
+	
+	public static void main(String[] args) {
+		
+		Scatola scatola = new Scatola();
+		scatola.setAltezza(20);
+		scatola.setLarghezza(30);
+		scatola.setProfondita(10);
+		
+		System.out.println("volume: "+scatola.calcolaVolume());
+		
+	}
+	
+}

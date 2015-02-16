@@ -1,0 +1,14 @@
+package it.tcweb.model.dao;
+
+import it.tcweb.model.dto.Corso;
+import it.tcweb.model.dto.EdizioneCorsuale;
+import it.tcweb.model.dto.Sede;
+
+public interface IDAOService {
+
+	
+	public void createCorso(Corso corso);
+	public void createSede(Sede sede);
+	public void createEdizioneCorsuale(EdizioneCorsuale edizioneCorsuale);
+	public void createSedeCorso(EdizioneCorsuale edizioneCorsuale);
+}

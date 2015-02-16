@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       
+      
+      <bean id="hibernateProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:hibernate.properties" />
+ 		<property name="placeholderPrefix" value="$HIBERNATE{" />
+ 	  </bean>
+	
+	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="$HIBERNATE{connection.driverClassName}"/>
+		<property name="url" value="$HIBERNATE{connection.url}"/>
+		<property name="username" value="$HIBERNATE{connection.username}"/>
+		<property name="password" value="$HIBERNATE{connection.password}"/>				
+	  </bean>	
+	
+       
+      <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+    	<property name="dataSource" ref="dataSource"/>
+    	<property name="mappingResources">
+      		<list>
+        		<value>it/tcweb/config/hibernate/corso.hbm.xml</value>
+				<value>it/tcweb/config/hibernate/sede.hbm.xml</value>
+				<value>it/tcweb/config/hibernate/edizione_corsuale.hbm.xml</value>        
+      		</list>
+    	</property>
+    	<property name="hibernateProperties">
+      		<value>
+        		hibernate.dialect=$HIBERNATE{hibernate.dialect}
+      		</value>
+    	</property>
+  	  </bean>
+      
+      
+    
+   	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>	
+	</bean>
+      
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>	
+	</bean>   
+      
+   	<bean id="dbServiceTarget" class="it.tcweb.model.dao.IDAOServiceImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate" />
+	</bean>
+                         
+    <bean id="dbService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager"/>
+		<property name="target" ref="dbServiceTarget"/>
+		<property name="transactionAttributes">
+		  <props>
+		    <prop key="*">PROPAGATION_REQUIRED</prop>
+		  </props>
+		</property>	
+	</bean>
+     
+      
+</beans>

@@ -1,0 +1,56 @@
+package it.formaweb.web;
+
+import it.formaweb.model.Animale;
+import it.formaweb.service.ServizioAnimali;
+
+import java.util.List;
+
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class MyAction extends ActionSupport{
+
+	private Animale animale;
+	
+	private ServizioAnimali servizioAnimali;
+	private List<Animale> animali;
+	
+	public String doSaveAnimale(){
+		
+		servizioAnimali.save(animale);
+		return SUCCESS;
+	}
+	
+	@Override
+	public String execute() throws Exception {
+		
+		animali = servizioAnimali.getAnimali();
+		
+		return SUCCESS;
+	}
+
+	public Animale getAnimale() {
+		return animale;
+	}
+
+	public void setAnimale(Animale animale) {
+		this.animale = animale;
+	}
+
+	public ServizioAnimali getServizioAnimali() {
+		return servizioAnimali;
+	}
+
+	public void setServizioAnimali(ServizioAnimali servizioAnimali) {
+		this.servizioAnimali = servizioAnimali;
+	}
+
+	public List<Animale> getAnimali() {
+		return animali;
+	}
+
+	public void setAnimali(List<Animale> animali) {
+		this.animali = animali;
+	}
+}

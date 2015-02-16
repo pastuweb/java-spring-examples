@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/repo/!svn/ver/7661/corsoJ2EE/SpringHibernateTest/config/it/tcweb/config/hibernate
+END
+corso.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/repo/!svn/ver/7661/corsoJ2EE/SpringHibernateTest/config/it/tcweb/config/hibernate/corso.hbm.xml
+END
+sede.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/repo/!svn/ver/7661/corsoJ2EE/SpringHibernateTest/config/it/tcweb/config/hibernate/sede.hbm.xml
+END
+edizione_corsuale.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/repo/!svn/ver/7661/corsoJ2EE/SpringHibernateTest/config/it/tcweb/config/hibernate/edizione_corsuale.hbm.xml
+END
